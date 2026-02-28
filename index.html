@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina | Philosophical Minds</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scrollbar-gutter: stable;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-reader { font-family: 'Lora', serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #0a0a0c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4d4d8;
+            border-radius: 10px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #27272a;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a1a1aa;
+        }
+
+        /* Markdown Custom Styles */
+        .md-highlight {
+            background: rgba(168, 85, 247, 0.1);
+            color: #9333ea;
+            padding: 0.1em 0.3em;
+            border-radius: 0.3em;
+        }
+        .dark .md-highlight {
+            background: rgba(168, 85, 247, 0.2);
+            color: #d8b4fe;
+            box-shadow: 0 0 10px rgba(168, 85, 247, 0.1);
+        }
+        .md-strikethrough {
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+        .md-inline-code {
+            font-family: 'JetBrains Mono', monospace;
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 0.1em 0.4em;
+            border-radius: 0.4em;
+            font-size: 0.9em;
+            color: #3f3f46;
+        }
+        .dark .md-inline-code {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a1a1aa;
+        }
+        .md-quote {
+            border-left: 3px solid #a855f7;
+            padding-left: 1.5rem;
+            font-style: italic;
+            margin: 1.5rem 0;
+            color: #52525b;
+        }
+        .dark .md-quote {
+            color: #71717a;
+        }
+        .md-hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(168, 85, 247, 0.2), transparent);
+            margin: 2rem 0;
+        }
+        .task-list-item {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
